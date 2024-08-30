@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block navbar %}
+    <nav class="navbar navbar-expand-lg navbar-dark" data-bs-theme="light" style="background-color: mediumblue;">
+        <div class="container-fluid">
+        <a class="navbar-brand fw-bold" href="{% url 'inicio' %}">Rafael Matteo</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{% url 'inicio' %}">Inicio</a>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                About Me and my projects
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="{% url 'about' %}">About Me</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="{% url 'python' %}">Python Developer</a></li>
+                <li><a class="dropdown-item" href="{% url 'dataAnalysis' %}">Data Analysis</a></li>
+                <li><a class="dropdown-item" href="{% url 'dataScience' %}">Data Science</a></li>
+                <li><a class="dropdown-item" href="{% url 'machineLearning' %}">Machine Learning</a></li>
+                <li><a class="dropdown-item" href="{% url 'deepLearning' %}">Deep Learning</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="{% url 'techSkills' %}">Technical Skills</a></li>
+                <li><a class="dropdown-item" href="{% url 'certificates' %}">Certificates</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Resume
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="{% static 'resume/english/resume_en.pdf' %}" download="resume_en.pdf">Download</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Contact me
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                    <a class="dropdown-item" href="https://wa.me/59891667422?text=Hello,%20I%20would%20like%20to%20know%20more%20about%20your%20services." target="_blank">
+                    <span style="color: green;">
+                        <i class="bi bi-whatsapp"></i>
+                    </span>
+                        Send me WhatsApp message
+                    </a>
+                </li>
+                <li>
+                    <a class="dropdown-item" href="mailto:rafaelmatteomourigan@gmail.com" target="_blank">
+                    <span style="color: red;">
+                        <i class="bi bi-envelope-at"></i>
+                    </span>
+                        Send me an Email
+                    </a>
+                </li>
+                <li>
+                    <a class="dropdown-item" href="https://www.linkedin.com/in/rjmatteomourigan/" target="_blank">
+                    <span style="color: #0000cd;">
+                        <i class="bi bi-linkedin"></i>
+                    </span>
+                        Visit my LinkedIn profile
+                    </a>
+                </li>
+                </ul>
+            </li>
+
+            <li class="nav-item">
+                <!-- <a class="nav-link active" href="../english/index.html">Spanish</a> -->
+                <a class="nav-link active" href="{% url 'home' %}">English</a>
+            </li>
+
+            </ul>
+        </div>
+        </div>
+    </nav>
+{% endblock %}

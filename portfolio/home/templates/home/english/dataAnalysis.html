@@ -1,0 +1,115 @@
+{% extends 'home/english/menu.html' %}
+
+{% load static %}
+
+{% block content %}
+    <div class="container mt-3 pe-0" style="background-color:orange;">
+        <div class="container ps-2 text-light fs-4 fw-bold" style="background-color: mediumblue;">
+            Data Analysis...
+        </div>
+    </div>
+
+    <div class="container mt-2">
+        <div class="row">
+            <div class="col">
+                <div class="card-body p-0">
+
+                    <div class="container mt-2">
+                        <div class="row">
+                            <!-- Columna para la imagen -->
+                            <div class="col-md-4">
+                                <img src="{% static 'images/data_analysis_python.avif' %}" class="rounded float-end mb-3 w-100" alt="Data Analysis">
+                            </div>
+                            <!-- Columna para el texto -->
+                            <div class="col-md-8">
+                                <p class="card-text">
+                                In this section, I showcase my experience and skills in data analysis, an essential discipline for transforming
+                                raw data into valuable information. Using tools such as pandas, matplotlib and seaborn, I have developed the
+                                ability to efficiently clean, process and visualize data.
+                                Through various projects, I have identified patterns and trends that would allow for making informed decisions.
+                                <br>
+                                Here you'll find examples of descriptive, inferential, and predictive analytics, each illustrating my ability to
+                                turn data into actionable insights.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <ul class="mt-2">
+                        <li>
+                            <h5><strong>Recipes</strong></h5>
+                        </li>
+                        <ul>
+                            <li>
+                                <h6>From understanding to preparing data</h6>
+                                Dataset description:<br>
+                                The data was compiled by a researcher named Yong-Yeol Ahn, who extracted tens of thousands of food 
+                                recipes (cuisines and ingredients) from three different websites, namely:
+                                <ul>
+                                    <li><a href="www.allrecipes.com" target="_blank">www.allrecipes.com</a></li>
+                                    <li><a href="www.epicurious.com" target="_blank">www.epicurious.com</a></li>
+                                    <li><a href="www.menupan.com" target="_blank">www.menupan.com</a></li>
+                                </ul>
+                                Our dataset consists of several recipes and their respective ingredients. <br>
+                                Each row represents a recipe, and for each recipe, the corresponding geographic area is documented
+                                and whether or not the ingredients exist in the recipe, starting with almond
+                                and ending with zucchini. <br>
+                                We want to determine which ingredients are most commonly used in each geographic area. <br>
+                                For this reason, the name of each recipe was removed, leaving only the geographic area and
+                                ingredients.
+                                <ul>
+                                    br>
+                                    <li>
+                                        Dataset: recipes.csv
+                                    </li>
+                                    <li>
+                                        Tools: Python, Jupyter Lab, Numpy, Pandas
+                                    </li>
+                                    <li>
+                                        You can download the complete project (zip) or just the code (pdf).
+                                        <br>
+                                        <a class="btn_dwld m-2" id="btn_dwld" href="./projects/data_analysis/Recipes.zip" download="Recipes.zip">Recipes.zip</a>
+                                        <a class="btn_dwld m-2" id="btn_dwld" href="./projects/data_analysis/Recipes.pdf" download="Recipes.pdf">Recipes.pdf</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <br>
+
+                        <li>
+                            <h5><strong>Teaching Ratings</strong></h5>
+                        </li>
+                        <ul>
+                            <li>
+                                <h6>Evaluating Teacher Productivity and Beauty</h6>
+                                Introduction: <br>
+                                The data were obtained from end-of-semester evaluations of students in 463 courses
+                                taught by a sample of 94 professors at the University of Texas at Austin. <br>
+                                In addition, six students rated the physical appearance of the professors. <br>
+                                The result is a data frame where each row contains a different course and each column
+                                has information about the course and the professor who taught it.
+                                <ul>
+                                <li>
+                                    Dataset extracted from: <a href="https://www.openintro.org/data/index.php?data=evals" target="_blank">Evaluating Teacher Productivity and Beauty</a>
+                                </li>
+                                <li>
+                                    Tools: Python, Jupyter Lab, Numpy, Pandas, Matplotlib, Seaborn
+                                </li>
+                                <li>
+                                    You can download the complete project (zip) or just the code (pdf).
+                                    <br>
+                                    <a class="btn_dwld m-2" id="btn_dwld" href="./projects/data_analysis/Teaching_Ratings.zip" download="Teaching_Ratings.zip">Teaching_Ratings.zip</a>
+                                    <a class="btn_dwld m-2" id="btn_dwld" href="./projects/data_analysis/Teaching_Ratings.pdf" download="Teaching_Ratings.pdf">Teaching_Ratings.pdf</a>
+                                </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <br>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <p class="card-text text-end mt-2"><small class="text-muted">Last update: August 12, 2024</small></p>  
+  </div>
+{% endblock %}

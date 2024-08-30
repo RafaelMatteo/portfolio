@@ -1,0 +1,60 @@
+{% extends 'home/spanish/menu.html' %}
+
+{% load static %}
+
+{% block content %}
+<div class="container mt-3 pe-0" style="background-color:orange;">
+    <div class="container ps-2 text-light fs-4 fw-bold" style="background-color: mediumblue;">
+      Hola soy Rafael...
+    </div>
+  </div>
+
+  <div class="container mt-2">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="{% static 'images/user.jpg' %}" class="img-fluid rounded-start">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body pt-0">
+          <p class="card-text">
+            <ul>
+              <li>
+                  I am passionate about Programming, Analytics, Data Science and Machine Learning
+                  with a strong focus on developing analytical skills and problem solving.
+                  With a background in Software Development, my curiosity and desire to learn led me to acquire solid
+                  knowledge about Programming in different languages.
+              </li>
+              <li>
+                  I started out in 2003 with Microsoft Visual Basic 6, Microsoft FoxPro, Microsoft Visual FoxPro,
+                  then Microsoft Visual Basic.net, Microsoft Visual C#, SQL, HTML, Javascript, AJAX, Microsoft SQL Server,
+                  implementing different solutions to the requirements of the Company I was developing for. These
+                  focused primarily on various independent desktop applications in which data had to be loaded
+                  and retrieved manually for later use; until arriving at the planning and
+                  deployment of a custom ERP (Enterprise Resource Planning) according to the
+                  requirements of the different Sectors of the same.
+              </li>
+              <li>
+                  Later, I decided to leave behind proprietary platforms and start working on Open Source platforms
+                  so, looking for other programming languages ​and through my colleagues I got to know Python, which thanks to 
+                  its simplicity and clarity of code made me fall in love with it and focus on it, both in the development of 
+                  Desktop Applications and Web Applications; later moving on to Data Analysis and Science and through it, 
+                  implementing solutions in Machine Learning and Deep Learning, disciplines that have captivated me, where I 
+                  work with Pandas and NumPy to TensorFlow and Pytorch.
+              </li>
+              <li>
+                  I have consolidated my experience developing various projects ranging from a simple calculator, exploratory 
+                  data analysis (EDA) to the implementation of advanced machines with various learning models.
+              </li>
+              <li>
+                  My approach to problem solving has been reflected in practical projects where I have applied Machine Learning 
+                  techniques to make informed decisions and improve decision-making processes.
+              </li>
+            </ul>
+          </p>
+          
+        </div>
+      </div>
+    </div>
+    <p class="card-text text-end mt-2"><small class="text-muted">Last update: August 12, 2024</small></p>
+  </div>
+{% endblock %}

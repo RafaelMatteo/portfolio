@@ -1,0 +1,209 @@
+{% extends 'home/english/menu.html' %}
+
+{% load static %}
+
+{% block content %}
+    <div class="container mt-3 pe-0" style="background-color:orange;">
+        <div class="container ps-2 text-light fs-4 fw-bold" style="background-color: mediumblue;">
+            About Me and my projects...
+        </div>
+    </div>
+
+    <div class="container mt-3">
+        <div class="row row-cols-1 row-cols-md-3">
+
+            <!-- About Me -->
+            <div class="col p-2">
+                <div class="card" id="card">
+                    <a href="{% url 'about' %}">
+                        <img src="{% static 'images/about_me.jpg' %}" class="card-img-top">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">
+                            <span style="color: #0000cd;">
+                                <i class="fa-solid fa-circle-chevron-right"></i>
+                            </span>
+                                About Me...
+                        </h5>
+                        <p class="card-text">
+                            A brief history of my beginnings in application development to Data Analysis and Data Science with Python.
+                        </p>
+                    </div>
+                    <div class="pb-2" id="div-btn">
+                        <a href="{% url 'about' %}" class="btn" id="btn" type="button">Reed more</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Python Developer -->
+            <div class="col p-2">
+                <div class="card" id="card">
+                    <a href="{% url 'python' %}">
+                        <img src="{% static 'images/pydjango.jpg' %}" class="card-img-top">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">
+                            <span style="color: #0000cd;">
+                                <i class="fa-solid fa-circle-chevron-right"></i>
+                            </span>
+                        Python Developer...
+                        </h5>
+                        <p class="card-text">
+                            Some of my projects as a Python Developer, implementing different packages, libraries and frameworks.
+                        </p>
+                    </div>
+                    <div class="pb-2" id="div-btn">
+                        <a href="{% url 'python' %}" class="btn" id="btn" type="button">Read more</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Data Analysis -->
+            <div class="col p-2">
+                <div class="card" id="card">
+                    <a href="{% url 'dataAnalysis' %}">
+                        <img src="{% static 'images/data_analysis_python.avif' %}" class="card-img-top">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">
+                            <span style="color: #0000cd;">
+                                <i class="fa-solid fa-circle-chevron-right"></i>
+                            </span>
+                            Data Analysis...
+                        </h5>
+                        <p class="card-text">
+                        With tools like pandas and matplotlib, I transform raw data into useful information, thus helping in decision making.
+                        </p>
+                    </div>
+                    <div class="pb-2" id="div-btn">
+                        <a href="{% url 'dataAnalysis' %}" class="btn" id="btn" type="button">Read more</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Data Science -->
+            <div class="col p-2">
+                <div class="card" id="card">
+                    <a href="{% url 'dataScience' %}">
+                        <img src="{% static 'images/stats.jpg' %}" class="card-img-top">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">
+                            <span style="color: #0000cd;">
+                                <i class="fa-solid fa-circle-chevron-right"></i>
+                            </span>
+                            Data Science...
+                        </h5>
+                        <p class="card-text">
+                        By applying advanced modeling and statistical analysis techniques, I discover hidden patterns in data, improving the understanding and prediction of behaviors and trends.
+                        </p>
+                    </div>
+                    <div class="pb-2" id="div-btn">
+                        <a href="{% url 'dataScience' %}" class="btn" id="btn" type="button">Read more</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Machine Learning -->
+            <div class="col p-2">
+                <div class="card" id="card">
+                    <a href="{% url 'machineLearning' %}">
+                        <img src="{% static 'images/data_science.jpg' %}" class="card-img-top">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">
+                            <span style="color: #0000cd;">
+                                <i class="fa-solid fa-circle-chevron-right"></i>
+                            </span>
+                            Machine Learning...
+                        </h5>
+                        <p class="card-text">
+                            I develop efficient predictive models using Machine Learning algorithms, optimizing their performance through 
+                            experimentation and hyperparameter tuning.
+                            <br>
+                            <br>
+                        </p>
+                    </div>
+                    <div class="pb-2" id="div-btn">
+                        <a href="{% url 'machineLearning' %}" class="btn" id="btn" type="button">Read more</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Deep Learning -->
+            <div class="col p-2">
+                <div class="card" id="card">
+                    <a href="{% url 'deepLearning' %}">
+                        <img src="{% static 'images/deep_learn.jpg' %}" class="card-img-top">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">
+                            <span style="color: #0000cd;">
+                                <i class="fa-solid fa-circle-chevron-right"></i>
+                            </span>
+                            Deep Learning...
+                        </h5>
+                        <p class="card-text">
+                        In progress...
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        </p>
+                    </div>
+                    <div class="pb-2" id="div-btn">
+                        <a href="{% url 'deepLearning' %}" class="btn" id="btn" type="button">Read more</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Technical Skills -->
+            <div class="col p-2">
+                <div class="card" id="card">
+                    <a href="{% url 'techSkills' %}">
+                        <img src="{% static 'images/technical_skills.jpg' %}" class="card-img-top">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">
+                            <span style="color: #0000cd;">
+                                <i class="fa-solid fa-circle-chevron-right"></i>
+                            </span>
+                            Technical skills...
+                        </h5>
+                        <p class="card-text">
+                        Proficient in Python, Django, pandas, scikit-learn, among other key tools and technologies for the development of applications in Data Analysis and Data Science.
+                        </p>
+                    </div>
+                    <div class="pb-2" id="div-btn">
+                        <a href="{% url 'techSkills' %}" class="btn" id="btn" type="button">Read more</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certificates -->
+            <div class="col p-2">
+                <div class="card" id="card">
+                    <a href="{% url 'certificates' %}">
+                        <img src="{% static 'images/cert.jpg' %}" class="card-img-top">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">
+                        <span style="color: #0000cd;">
+                            <i class="fa-solid fa-circle-chevron-right"></i>
+                        </span>
+                        Certificates...
+                        </h5>
+                        <p class="card-text">
+                        Certifications that endorse my training and competence in software development, analysis and data science, demonstrating my commitment to continuous learning and professional excellence.
+                        </p>
+                    </div>
+                    <div class="pb-2" id="div-btn">
+                        <a href="{% url 'certificates' %}" class="btn" id="btn" type="button">Read more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p class="card-text text-end mt-2"><small class="text-muted">Last update: August 12, 2024</small></p>
+    </div>
+{% endblock %}

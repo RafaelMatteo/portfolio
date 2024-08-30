@@ -1,0 +1,238 @@
+{% extends 'home/english/menu.html' %}
+
+{% load static %}
+
+{% block content %}
+    <div class="container mt-3 pe-0" style="background-color:orange;">
+        <div class="container ps-2 text-light fs-4 fw-bold" style="background-color: mediumblue;">
+        Certificates...
+        </div>
+    </div>
+
+    <div class="container mt-2">
+        <div class="row">
+            <div class="col">
+                <div class="card-body p-0">
+
+                    <div class="container mt-2">
+                        <div class="row">
+                            <!-- Columna para la imagen -->
+                            <div class="col-md-4">
+                                <img src="{% static 'images/cert.jpg' %}" class="rounded float-end mb-3 w-100" alt="Certificates">
+                            </div>
+                            <!-- Columna para el texto -->
+                            <div class="col-md-8">
+                                <p class="card-text">
+                                Certifications are a formal validation of my knowledge and skills.
+                                In this section, I present the certifications I have earned in various areas of software development,
+                                data analytics, and data science. These certifications demonstrate my commitment to continuous
+                                learning and my dedication to staying up-to-date with the latest technologies and
+                                methodologies in the field.
+                                <br>
+                                Each certificate is a testament to my ability to meet professional standards
+                                and my determination to achieve excellence in my career.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row row-cols-1 row-cols-md-4 g-4 mt-2">
+                        
+                        <!--Google Advanced Data Analytics-->
+                        <div class="col">
+                            <div class="card">
+                                <a href="{% static 'images/certificates/Google_Advanced_Data_Analytics.jpg' %}" target="_blank">
+                                    <img src="{% static 'images/certificates/Google_Advanced_Data_Analytics_min.jpg' %}">
+                                </a>
+                                <div class="card-body text-center">
+                                    <h6 class="card-title"><strong>Advanced Data Analytics</strong></h6>
+                                    <h6 class="card-title" style="color:blue">Google</h6>
+                                    <p class="card-text">
+                                        <a class="btn_dwld" id="btn_dwld" href="https://coursera.org/verify/professional-cert/2GWTZGWLMAP4" target="_blank">Verify</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--TensorFlow Developer-->
+                        <div class="col">
+                            <div class="card">
+                                <a href="{% static 'images/certificates/TensorFlow_Developer.jpg' %}" target="_blank">
+                                    <img src="{% static 'images/certificates/TensorFlow_Developer_min.jpg' %}">
+                                </a>
+                                <div class="card-body text-center">
+                                    <h6 class="card-title"><strong>TensorFlow Developer</strong></h6>
+                                    <h6 class="card-title" style="color:blue">DeepLearning.AI</h6>
+                                    <p class="card-text">
+                                        <a class="btn_dwld" id="btn_dwld" href="https://coursera.org/verify/professional-cert/9N9SKTJ7WZ37" target="_blank">Verify</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Machine Learning-->
+                        <div class="col">
+                            <div class="card">
+                                <a href="{% static 'images/certificates/Machine_Learning.jpg' %}" target="_blank">
+                                    <img src="{% static 'images/certificates/Machine_Learning_min.jpg' %}">
+                                </a>
+                                <div class="card-body text-center">
+                                    <h6 class="card-title"><strong>Machine Lerarning</strong></h6>
+                                    <h6 class="card-title" style="color:blue">Stanford - DeepLearning.AI</h6>
+                                    <p class="card-text">
+                                        <a class="btn_dwld" id="btn_dwld" href="https://coursera.org/verify/specialization/765Q4URADL7F" target="_blank">Verify</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Data Science-->
+                        <div class="col">
+                            <div class="card">
+                                <a href="{% static 'images/certificates/Data_Science.jpg' %}" target="_blank">
+                                    <img src="{% static 'images/certificates/Data_Science_min.jpg' %}">
+                                </a>
+                                <div class="card-body text-center">
+                                    <h6 class="card-title"><strong>Data Science</strong></h6>
+                                    <h6 class="card-title" style="color:blue">IBM</h6>
+                                    <p class="card-text">
+                                        <a class="btn_dwld" id="btn_dwld" href="https://coursera.org/verify/professional-cert/ZXM6NQGC8F5N" target="_blank">Verify</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Data Analyst-->
+                        <div class="col">
+                            <div class="card">
+                                <a href="{% static 'images/certificates/Data_Analyst.jpg' %}" target="_blank">
+                                    <img src="{% static 'images/certificates/Data_Analyst_min.jpg' %}">
+                                </a>
+                                <div class="card-body text-center">
+                                    <h6 class="card-title"><strong>Data Analyst</strong></h6>
+                                    <h6 class="card-title" style="color:blue">IBM</h6>
+                                    <p class="card-text">
+                                        <a class="btn_dwld" id="btn_dwld" href="https://coursera.org/verify/professional-cert/MV5NTJX7UNL4" target="_blank">Verify</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Visualization Foundations-->
+                        <div class="col">
+                            <div class="card">
+                                <a href="{% static 'images/certificates/Visualization_Foundations.jpg' %}" target="_blank">
+                                    <img src="{% static 'images/certificates/Visualization_Foundations_min.jpg' %}">
+                                </a>
+                                <div class="card-body text-center">
+                                    <h6 class="card-title"><strong>Data Analysis and Visualization Foundations</strong></h6>
+                                    <h6 class="card-title" style="color:blue">IBM</h6>
+                                    <p class="card-text">
+                                        <a class="btn_dwld" id="btn_dwld" href="https://coursera.org/verify/specialization/E2HAD2UM63BP" target="_blank">Verify</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Data Science Fundamentals with Python and SQL-->
+                        <div class="col">
+                            <div class="card">
+                                <a href="{% static 'images/certificates/Data_Science_Fundamentals.jpg' %}" target="_blank">
+                                    <img src="{% static 'images/certificates/Data_Science_Fundamentals_min.jpg' %}">
+                                </a>
+                                <div class="card-body text-center">
+                                    <h6 class="card-title"><strong>Data Science Fundamentals with Python and SQL</strong></h6>
+                                    <h6 class="card-title" style="color:blue">IBM</h6>
+                                    <p class="card-text">
+                                        <a class="btn_dwld" id="btn_dwld" href="https://coursera.org/verify/specialization/6YTJ8X43EWEA" target="_blank">Verify</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Meta Database Engineer-->
+                        <div class="col">
+                        <div class="card">
+                            <a href="{% static 'images/certificates/Database_Engineer.jpg' %}" target="_blank">
+                            <img src="{% static 'images/certificates/Database_Engineer_min.jpg' %}">
+                            </a>
+                            <div class="card-body text-center">
+                            <h6 class="card-title"><strong>Database Engineer</strong></h6>
+                            <h6 class="card-title" style="color:blue">Meta</h6>
+                            <p class="card-text">
+                                <a class="btn_dwld" id="btn_dwld" href="https://coursera.org/verify/professional-cert/MEZQPBHPS52K" target="_blank">Verify</a>
+                            </p>
+                            </div>
+                        </div>
+                        </div>
+
+                        <!--Meta Front-End Developer-->
+                        <div class="col">
+                            <div class="card">
+                                <a href="{% static 'images/certificates/FrontEnd_Developer.jpg' %}" target="_blank">
+                                    <img src="{% static 'images/certificates/FrontEnd_Developer_min.jpg' %}">
+                                </a>
+                                <div class="card-body text-center">
+                                    <h6 class="card-title"><strong>Front-End Developer</strong></h6>
+                                    <h6 class="card-title" style="color:blue">Meta</h6>
+                                    <p class="card-text">
+                                        <a class="btn_dwld" id="btn_dwld" href="https://coursera.org/verify/professional-cert/39QTU5PUK85F" target="_blank">Verify</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Django for Everybody-->
+                        <div class="col">
+                            <div class="card">
+                                <a href="{% static 'images/certificates/Django.jpg' %}" target="_blank">
+                                    <img src="{% static 'images/certificates/Django_min.jpg' %}">
+                                </a>
+                                <div class="card-body text-center">
+                                    <h6 class="card-title"><strong>Django for Everybody</strong></h6>
+                                    <h6 class="card-title" style="color:blue">University of Michigan</h6>
+                                    <p class="card-text">
+                                        <a class="btn_dwld" id="btn_dwld" href="https://coursera.org/verify/specialization/82NG2UUHR8MP" target="_blank">Verify</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Python for Everybody-->
+                        <div class="col">
+                            <div class="card">
+                                <a href="{% static 'images/certificates/Python.jpg' %}" target="_blank">
+                                    <img src="{% static 'images/certificates/Python_min.jpg' %}">
+                                </a>
+                                <div class="card-body text-center">
+                                    <h6 class="card-title"><strong>Python for Everybody</strong></h6>
+                                    <h6 class="card-title" style="color:blue">University of Michigan</h6>
+                                    <p class="card-text">
+                                        <a class="btn_dwld" id="btn_dwld" href="https://coursera.org/verify/specialization/QFEV7QQSRYVF" target="_blank">Verify</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    <!--Open Source Software Development, Linux and Git-->
+                    <div class="col">
+                        <div class="card">
+                            <a href="{% static 'images/certificates/Linux.jpg' %}" target="_blank">
+                                <img src="{% static 'images/certificates/Linux_min.jpg' %}">
+                            </a>
+                            <div class="card-body text-center">
+                                <h6 class="card-title"><strong>Open Source Software Development, Linux and Git</strong></h6>
+                                <h6 class="card-title" style="color:blue">The Linux Foundation</h6>
+                                <p class="card-text">
+                                    <a class="btn_dwld" id="btn_dwld" href="https://coursera.org/verify/specialization/VAY75ZF844BC" target="_blank">Verify</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <p class="card-text text-end mt-2"><small class="text-muted">Last update: August 12, 2024</small></p>
+    </div>
+{% endblock %}
