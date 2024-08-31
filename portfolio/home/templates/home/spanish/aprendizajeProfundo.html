@@ -1,0 +1,42 @@
+{% extends 'home/spanish/menu.html' %}
+
+{% load static %}
+
+{% block content %}
+    <div class="container mt-3 pe-0" style="background-color:orange;">
+        <div class="container ps-2 text-light fs-4 fw-bold" style="background-color: mediumblue;">
+            Aprendizaje Profundo...
+        </div>
+    </div>
+
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col">
+                <div class="card-body p-0">
+
+                    <div class="container mt-2">
+                        <div class="row">
+                            <!-- Columna para la imagen -->
+                            <div class="col-md-4">
+                                <img src="{% static 'images/deep_learn.jpg' %}" class="rounded float-end mb-3 w-100" alt="Deep Learning">
+                            </div>
+                            <!-- Columna para el texto -->
+                            <div class="col-md-8">
+                                <p class="card-text">
+                                    En esta sección de mi portafolio, te invitaré a descubrir proyectos que irán desde la clasificación 
+                                    de imágenes hasta la predicción de series temporales, utilizaré técnicas como redes neuronales convolucionales 
+                                    (CNNs), redes neuronales recurrentes (RNNs) y más. <br>
+                                    Actualmente estoy preparando contenido que pronto estará disponible, cada proyecto será una pieza clave que 
+                                    demuestra cómo Deep Learning está transformando industrias, mejorando la toma de decisiones y creando nuevas 
+                                    posibilidades en el análisis de datos. <br>
+                                    <strong>¡Mantente atento para más actualizaciones!</strong>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>  
+        <p class="card-text text-end mt-2"><small class="text-muted">Última actualización: 12 de Agosto de 2024</small></p>
+    </div>
+{% endblock %}

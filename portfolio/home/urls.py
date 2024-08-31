@@ -17,6 +17,13 @@ urlpatterns = [
     path('certificates/', views.CertificatesView.as_view(), name='certificates'),
     
     # Spanish version
-    
     path('spanish/', views.PrincialView.as_view(), name='inicio'),
+    path('sobreMi/', views.SobreMiView.as_view(), name='sobreMi'),
+    path('pythonEs/', views.PythonEsView.as_view(), name='pythonEs'),
+    path('analisisDeDatos/', views.AnalisisDeDatosView.as_view(), name='analisisDeDatos'),
+    path('cienciaDeDatos/', views.CienciaDeDatosView.as_view(), name='cienciaDeDatos'),
+    path('aprendizajeAutomatico/', views.AprendizajeAutomaticoView.as_view(), name='aprendizajeAutomatico'),
+    path('aprendizajeProfundo/', views.AprendizajeProfundoView.as_view(), name='aprendizajeProfundo'),
+    path('habilidadesTecnicas/', views.HabilidadesTecnicasView.as_view(), name='habilidadesTecnicas'),
+    path('certificados/', views.CertificadosView.as_view(), name='certificados'),
 ]

@@ -1,0 +1,115 @@
+{% extends 'home/spanish/menu.html' %}
+
+{% load static %}
+
+{% block content %}
+    <div class="container mt-3 pe-0" style="background-color:orange;">
+        <div class="container ps-2 text-light fs-4 fw-bold" style="background-color: mediumblue;">
+            Análisis de Datos...
+        </div>
+    </div>
+
+    <div class="container mt-2">
+        <div class="row">
+            <div class="col">
+                <div class="card-body p-0">
+
+                    <div class="container mt-2">
+                        <div class="row">
+                            <!-- Columna para la imagen -->
+                            <div class="col-md-4">
+                                <img src="{% static 'images/data_analysis_python.avif' %}" class="rounded float-end mb-3 w-100" alt="Data Analysis">
+                            </div>
+                            <!-- Columna para el texto -->
+                            <div class="col-md-8">
+                                <p class="card-text">
+                                    En esta sección, muestro mi experiencia y habilidades en el análisis de datos, una disciplina esencial para transformar 
+                                    datos crudos en información valiosa. Utilizando herramientas como pandas, matplotlib y seaborn, he desarrollado la 
+                                    capacidad de limpiar, procesar y visualizar datos de manera eficiente.
+                                    A través de diversos proyectos, he identificado patrones y tendencias que permitirían tomar decisiones informadas. 
+                                    <br>
+                                    Aquí encontrarás ejemplos de análisis descriptivos, inferenciales y predictivos, cada uno ilustrando mi habilidad para 
+                                    convertir datos en conocimientos accionables.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <ul class="mt-2">
+                        <li>
+                            <h5><strong>Recipes</strong></h5>
+                        </li>
+                        <ul>
+                            <li>
+                                <h6>Desde la comprensión hasta la preparación de los Datos</h6>
+                                Descripción del conjunto de Datos:<br>
+                                Los datos fueron compilados por un investigador llamado Yong-Yeol Ahn, quien extrajo decenas de 
+                                miles de recetas de comida (cocinas e ingredientes) de tres sitios web diferentes, a saber:
+                                <ul>
+                                    <li><a href="www.allrecipes.com" target="_blank">www.allrecipes.com</a></li>
+                                    <li><a href="www.epicurious.com" target="_blank">www.epicurious.com</a></li>
+                                    <li><a href="www.menupan.com" target="_blank">www.menupan.com</a></li>
+                                </ul>
+                                Nuestro conjunto de datos consta de diversas recetas y sus respectivos ingredientes. <br>
+                                Cada fila representa una receta, y para cada receta, se documenta la zona geográfica 
+                                correspondiente y si existen o no los ingredientes en la receta, comenzando con almendras 
+                                (almond) y terminando con zucchini (zucchini). <br>
+                                Queremos determinar cuáles son los ingredientes más usados en cada zona geográfica. <br>
+                                Por tal razón se eliminó el nombre de cada receta, quedando solo la zona geográfica y los 
+                                ingredientes.
+                                <ul>
+                                    br>
+                                    <li>
+                                        Conjunto de datos: recipes.csv
+                                    </li>
+                                    <li>
+                                        Herramientas utilizadas: Python, Jupyter Lab, Numpy, Pandas
+                                    </li>
+                                    <li>
+                                        Puedes descargar el proyecto completo (zip) o solo el código (pdf).
+                                        <br>
+                                        <a class="btn_dwld m-2" id="btn_dwld" href="{% static 'projects/spanish/data_analysis/Recetas.zip' %}" download="Recetas.zip">Recetas.zip</a>
+                                        <a class="btn_dwld m-2" id="btn_dwld" href="{% static 'projects/spanish/data_analysis/Recetas.pdf' %}" download="Recetas.pdf">Recetas.pdf</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <br>
+
+                        <li>
+                            <h5><strong>Calificación de Docentes</strong></h5>
+                        </li>
+                        <ul>
+                            <li>
+                                <h6>Evaluación de Productividad de Profesores y de su belleza</h6>
+                                Introducción: <br>
+                                Los datos se obtuvieron de las evaluaciones de fin de semestre de los estudiantes de 463 cursos 
+                                impartidos por una muestra de 94 profesores de la Universidad de Texas en Austin. <br>
+                                Además, seis estudiantes calificaron la apariencia física de los profesores. <br>
+                                El resultado es un marco de datos donde cada fila contiene un curso diferente y cada columna 
+                                tiene información sobre el curso y el profesor que lo impartió.
+                                <ul>
+                                    <li>
+                                    Conjunto de datos extraido de: <a href="https://www.openintro.org/data/index.php?data=evals" target="_blank">Evaluación de Productividad de Profesores y su belleza</a>
+                                    </li>
+                                    <li>
+                                    Herramientas utilizadas: Python, Jupyter Lab, Numpy, Pandas, Matplotlib, Seaborn
+                                    </li>
+                                    <li>
+                                    Puedes descargar el proyecto completo (zip) o solo el código (pdf).
+                                    <br>
+                                    <a class="btn_dwld m-2" id="btn_dwld" href="{% static 'projects/spanish/data_analysis/Calificacion_docente.zip' %}" download="Calificacion_docente.zip">Calificacion_docente.zip</a>
+                                    <a class="btn_dwld m-2" id="btn_dwld" href="{% static 'projects/spanish/data_analysis/Calificacion_docente.pdf' %}" download="Calificacion_docente.pdf">Calificacion_docente.pdf</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <br>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <p class="card-text text-end mt-2"><small class="text-muted">Última actualización: 12 de Agosto de 2024</small></p>
+  </div>
+{% endblock %}
