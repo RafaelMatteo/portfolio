@@ -1,16 +1,42 @@
+from django.http import HttpResponse
 from django.shortcuts import render
 from django.views import View
 from django.conf import settings
+from twilio.rest import Client
 
 # Create your views here.
 
 # This is a little complex because we need to detect when we are
 # running in various configurations
 
+# Twilio msg
+
+def send_whatsapp_message(message):
+    try:
+        client = Client(settings.TWILIO_ACCOUNT_SID, settings.TWILIO_AUTH_TOKEN)
+        client.messages.create(
+            body=message,
+            from_=settings.TWILIO_PHONE_NUMBER,
+            to='whatsapp:+59891667422'
+        )
+    except Exception as e:
+        print(f"Error sending message: {e}")
+    
+
+# def notify_visit(request):
+#     send_whatsapp_message('¡Alguien ha visitado el portafolio!')
+#     return HttpResponse('Notificación enviada')
+
+
 ## English Version
 
 class HomeView(View):
     def get(self, request):
+        
+        send_whatsapp_message('¡Alguien ha visitado tu sitio web!')
+        print('Se envió un mensaje al whatsapp...')
+        
+        # Procesar la solicitud
         print(request.get_host())
         host = request.get_host()
         islocal = host.find('localhost') >= 0 or host.find('127.0.0.1') >= 0
@@ -225,4 +251,4 @@ class CertificadosView(View):
             'islocal': islocal,
         }
         return render(request, 'home/spanish/certificados.html', context)
-    
+

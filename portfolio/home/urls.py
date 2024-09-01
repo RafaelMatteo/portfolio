@@ -26,4 +26,7 @@ urlpatterns = [
     path('aprendizajeProfundo/', views.AprendizajeProfundoView.as_view(), name='aprendizajeProfundo'),
     path('habilidadesTecnicas/', views.HabilidadesTecnicasView.as_view(), name='habilidadesTecnicas'),
     path('certificados/', views.CertificadosView.as_view(), name='certificados'),
+    
+    # Twilio path
+    # path('notify/', views.notify_visit, name='notify_visit'),
 ]
