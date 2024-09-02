@@ -6,9 +6,6 @@ from twilio.rest import Client
 
 # Create your views here.
 
-# This is a little complex because we need to detect when we are
-# running in various configurations
-
 # Twilio msg
 
 def send_whatsapp_message(message):
@@ -23,18 +20,13 @@ def send_whatsapp_message(message):
         print(f"Error sending message: {e}")
     
 
-# def notify_visit(request):
-#     send_whatsapp_message('¡Alguien ha visitado el portafolio!')
-#     return HttpResponse('Notificación enviada')
-
-
 ## English Version
 
 class HomeView(View):
     def get(self, request):
         
-        send_whatsapp_message('¡Alguien ha visitado tu sitio web!')
-        print('Se envió un mensaje al whatsapp...')
+        # Descomentar antes de hacer el commit y subir al servidor
+        send_whatsapp_message('¡Alguien ha visitado tu sitio web (English)!')
         
         # Procesar la solicitud
         print(request.get_host())
@@ -147,6 +139,10 @@ class CertificatesView(View):
 
 class PrincialView(View):
     def get(self, request):
+        
+        # Descomentar antes de hacer el commit y subir al servidor
+        send_whatsapp_message('¡Alguien ha visitado tu sitio web (Español)!')
+        
         print(request.get_host())
         host = request.get_host()
         islocal = host.find('localhost') >= 0 or host.find('127.0.0.1') >= 0

@@ -16,7 +16,7 @@ import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-APP_NAME = 'RJ Matteo Mourigan Portfolio'
+APP_NAME = 'RJ Matteo Mourigan Portfolio' # New
 
 
 # Quick-start development settings - unsuitable for production
@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-)1&n7c(g(pq&2v873n=-q3p!a!mn5m#oi!*f6c7o(7_e#1-_dw
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['*'] # New
 
 
 # Application definition
@@ -71,7 +71,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'home.context_processors.settings',      # Add
+                'home.context_processors.settings',      # New
             ],
         },
     },
@@ -126,8 +126,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [BASE_DIR / 'home' / 'static']
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_DIRS = [BASE_DIR / 'home' / 'static'] # New
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles') # New
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
@@ -136,6 +136,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Twilio conf
 
-TWILIO_ACCOUNT_SID = 'AC96578720b94b741752275119bbfe82fd'
-TWILIO_AUTH_TOKEN = '808866c58badf809caa55568f9097ac8'
-TWILIO_PHONE_NUMBER = 'whatsapp:+14155238886'  # Número de WhatsApp de Twilio
+TWILIO_ACCOUNT_SID = 'AC96578720b94b741752275119bbfe82fd' # New
+TWILIO_AUTH_TOKEN = '808866c58badf809caa55568f9097ac8' # New
+TWILIO_PHONE_NUMBER = 'whatsapp:+14155238886'  # New - Número de WhatsApp de Twilio
