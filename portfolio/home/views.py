@@ -1,29 +1,25 @@
 from django.shortcuts import render
 from django.views import View
 from django.conf import settings
-from twilio.rest import Client
+from django.core.mail import send_mail
+
 
 # Twilio msg
 
-def send_whatsapp_message(message):
-    try:
-        client = Client(settings.TWILIO_ACCOUNT_SID, settings.TWILIO_AUTH_TOKEN)
-        client.messages.create(
-            body=message,
-            from_=settings.TWILIO_PHONE_NUMBER,
-            to='whatsapp:+59891667422'
-        )
-    except Exception as e:
-        print(f"Error sending message: {e}")
+def send_email_notification(message):
+    send_mail(
+        subject='Notificación de Visita',
+        message=message,
+        from_email=settings.EMAIL_HOST_USER,
+        recipient_list=['rafaelmatteomourigan@gmail.com'],  
+        fail_silently=False,
+    )
     
 
 ## English Version
 
 class HomeView(View):
     def get(self, request):
-        
-        # Descomentar antes de hacer el commit y subir al servidor
-        send_whatsapp_message('¡Alguien ha visitado tu sitio web (English)!')
         
         # Procesar la solicitud
         print(request.get_host())
@@ -33,6 +29,7 @@ class HomeView(View):
             'installed': settings.INSTALLED_APPS,
             'islocal': islocal,
         }
+        send_email_notification('¡Alguien ha visitado tu sitio web (English)!')
         return render(request, 'home/english/main.html', context)
     
     
@@ -137,9 +134,6 @@ class CertificatesView(View):
 class PrincialView(View):
     def get(self, request):
         
-        # Descomentar antes de hacer el commit y subir al servidor
-        send_whatsapp_message('¡Alguien ha visitado tu sitio web (Español)!')
-        
         print(request.get_host())
         host = request.get_host()
         islocal = host.find('localhost') >= 0 or host.find('127.0.0.1') >= 0
@@ -147,6 +141,7 @@ class PrincialView(View):
             'installed': settings.INSTALLED_APPS,
             'islocal': islocal,
         }
+        send_email_notification('¡Alguien ha visitado tu sitio web (Español)!')        
         return render(request, 'home/spanish/principal.html', context)
     
     

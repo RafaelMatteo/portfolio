@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
+from decouple import config
 import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -134,8 +135,11 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles') # New
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# Twilio conf
+# Backend for e-mail notification
 
-TWILIO_ACCOUNT_SID = 'AC96578720b94b741752275119bbfe82fd' # New
-TWILIO_AUTH_TOKEN = '808866c58badf809caa55568f9097ac8' # New
-TWILIO_PHONE_NUMBER = 'whatsapp:+14155238886'  # New - Número de WhatsApp de Twilio
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = config('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
